@@ -5,7 +5,7 @@
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
         <ProjectGuid>{E6CC674F-C552-412E-8272-692CE182AB7A}</ProjectGuid>
-        <OutputType>Library</OutputType>
+        <OutputType>Exe</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
         <RootNamespace>Web3Dots</RootNamespace>
         <AssemblyName>Web3Dots.EVM</AssemblyName>
@@ -41,8 +41,8 @@
           <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.1.0.0\lib\netstandard1.1\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
         </Reference>
         <Reference Include="mscorlib" />
-        <Reference Include="NBitcoin, Version=7.0.24.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\packages\NBitcoin.7.0.24\lib\netstandard1.1\NBitcoin.dll</HintPath>
+        <Reference Include="NBitcoin, Version=7.0.27.0, Culture=neutral, processorArchitecture=MSIL">
+          <HintPath>..\packages\NBitcoin.7.0.27\lib\netstandard1.1\NBitcoin.dll</HintPath>
         </Reference>
         <Reference Include="Nethereum.ABI, Version=4.14.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
           <HintPath>..\packages\Nethereum.ABI.4.14.0\lib\netstandard1.1\Nethereum.ABI.dll</HintPath>

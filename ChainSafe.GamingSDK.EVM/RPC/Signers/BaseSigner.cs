@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Nethereum.Hex.HexTypes;
 using Nethereum.RPC.Eth.DTOs;
+using Nethereum.Signer;
 using Nethereum.Web3;
 using Nethereum.Web3.Accounts;
 using Web3Unity.Scripts.Library.Ethers.Providers;
@@ -41,15 +42,14 @@ namespace Web3Unity.Scripts.Library.Ethers.Signers
             throw new Exception("SignTransaction not implemented");
         }
         
-        public async Task<string> SignTransaction(string privateKey, string toAddress, decimal amountInEth)
+        public async Task<string> SignSendTransaction(string privateKey, string toAddress, decimal amountInEth, string providerUrl)
         {
-            var web3 = new Web3();
-    
-            // Create an Account object from the private key
-            var account = new Account(privateKey);
-    
+
+            
+            var web3 = new Web3(new Account(privateKey), providerUrl);
+            var publicAddress = new EthECKey(privateKey).GetPublicAddress();
             // Get the nonce for the sender address
-            var nonce = await web3.Eth.Transactions.GetTransactionCount.SendRequestAsync(account.Address);
+            var nonce = await web3.Eth.Transactions.GetTransactionCount.SendRequestAsync(publicAddress);
     
             // Calculate the gas price
             var gasPrice = await web3.Eth.GasPrice.SendRequestAsync();
@@ -57,19 +57,20 @@ namespace Web3Unity.Scripts.Library.Ethers.Signers
             // Create the transaction input
             var txInput = new TransactionInput
             {
-                From = account.Address,
+                From = publicAddress,
                 To = toAddress,
-                Value = new HexBigInteger(Web3.Convert.ToWei(amountInEth)),
+                Value = new HexBigInteger(100000000000000),
                 Nonce = nonce,
-                GasPrice = gasPrice,
-                Gas = new HexBigInteger(21000) // Standard gas limit for a simple transfer
+                GasPrice = new HexBigInteger(75000),
+                Gas = new HexBigInteger(100000) // Standard gas limit for a simple transfer
             };
     
             // Sign the transaction with the account's private key
-            var signedTx = account.TransactionManager.SignTransactionAsync(txInput);
-    
+            var signedTx = await web3.Eth.TransactionManager.SignTransactionAsync(txInput);
+            var signedTransaction = signedTx;
+            Console.WriteLine("Signed Transaction: " + signedTx);
             // Send the signed transaction
-            var transactionHash = await web3.Eth.Transactions.SendRawTransaction.SendRequestAsync(signedTx.Result);
+            var transactionHash = await web3.Eth.Transactions.SendRawTransaction.SendRequestAsync(signedTransaction);
     
             return transactionHash;
         }
