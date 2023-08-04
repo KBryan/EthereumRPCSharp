@@ -1,7 +1,6 @@
 ﻿using Nethereum.Hex.HexTypes;
 using Nethereum.RPC.Eth.DTOs;
 using NUnit.Framework;
-using NUnit.Framework.Internal;
 using Web3Unity.Scripts.Library.Ethers.Contracts;
 using Web3Unity.Scripts.Library.Ethers.Providers;
 using Web3Unity.Scripts.Library.Ethers.Transactions;
@@ -10,7 +9,7 @@ using Web3Unity.Scripts.Library.Ethers.Utils;
 namespace Tests
 {
     [TestFixture]
-    public class ChainSafeRpcTests
+    public class Web3DotsTests
     {
         private JsonRpcProvider _ganacheProvider;
         private string _goerliAddress;

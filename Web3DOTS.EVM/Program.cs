@@ -4,7 +4,6 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using NBitcoin;
-using NBitcoin.Crypto;
 using Nethereum.Hex.HexConvertors.Extensions;
 using Nethereum.Hex.HexTypes;
 using Nethereum.Signer;
@@ -12,30 +11,25 @@ using Nethereum.Util;
 using Nethereum.Web3.Accounts;
 using Newtonsoft.Json;
 using Org.BouncyCastle.Math;
-using Web3Unity.Scripts.Library.Ethers.Contracts;
-using Web3Unity.Scripts.Library.Ethers.HDNode;
-using Web3Unity.Scripts.Library.Ethers.Network;
 using Web3Unity.Scripts.Library.Ethers.Providers;
 using Web3Unity.Scripts.Library.Ethers.Signers;
 using Web3Unity.Scripts.Library.Ethers.Transactions;
-using Transaction = Web3Unity.Scripts.Library.Ethers.Transactions.Transaction;
 
-
-namespace EthersCSharpv2
+namespace Web3Dots
 {
     public class Program : BaseSigner
     {
         private readonly Key _signingKey;
         public static async Task Main(string[] args)
         {
-            await GetRPCData();
+            await GetRpcData();
             await GetNetwork();
             CreateEthWallet();
         }
         
         public BaseProvider BaseProvider { get; }
 
-        private static async Task GetRPCData()
+        private static async Task GetRpcData()
         {
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
@@ -61,23 +55,17 @@ namespace EthersCSharpv2
                 GasLimit = 100000.ToHexBigInteger(),
                 Value = new HexBigInteger(100000)
             };
-            var result = await signer.SignTransaction(
-                "ADD_KEY",
-                "0xd25b827D92b0fd656A1c829933e9b0b836d5C3e2", 123);
-            Console.WriteLine("Result: " + result);
         }
 
-        public static async Task<string> GetNetwork()
+        private static async Task GetNetwork()
         {
             var provider = new JsonRpcProvider("https://staging-v3.skalenodes.com/v1/staging-faint-slimy-achird");
             var network = await provider.GetNetwork();
             Console.WriteLine($"Network name: {network.Name}");
             Console.WriteLine($"Network chain id: {network.ChainId}");
-
-            return network.Name;
         }
 
-        public static void CreateEthWallet()
+        private static void CreateEthWallet()
         {
             // Generate a random seed using the RNGCryptoServiceProvider
             byte[] randomBytes = new byte[16];
@@ -110,7 +98,6 @@ namespace EthersCSharpv2
                 // Generate the Ethereum public address from the private key
                 string address = privateKey.GetPublicAddress().ToLower();
                 
-            
                 // Print the Ethereum public address
                 Console.WriteLine("Public address: " + address);
             }
@@ -155,12 +142,12 @@ namespace EthersCSharpv2
                     result[i] = 0;
                 }
             }
-
             return result;
         }
-
-        public Program(IProvider provider) : base(provider)
+        public Program(IProvider provider, BaseProvider baseProvider, Key signingKey) : base(provider)
         {
+            BaseProvider = baseProvider;
+            _signingKey = signingKey;
         }
     }
 }
