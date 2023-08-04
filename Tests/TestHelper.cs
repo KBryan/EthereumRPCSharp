@@ -1,6 +1,6 @@
 using System;
 using NUnit.Framework;
-using Web3Unity.Scripts.Library.Ethers.Providers;
+using Web3Dots.RPC.Providers;
 
 namespace Tests
 {

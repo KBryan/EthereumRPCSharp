@@ -1,15 +1,13 @@
-using System.Collections.Generic;
 using System.Numerics;
 using System.Threading.Tasks;
 using Nethereum.Hex.HexTypes;
 using Nethereum.RPC.Eth.DTOs;
-using Web3Unity.Scripts.Library.Ethers.Blocks;
-using Web3Unity.Scripts.Library.Ethers.Transactions;
-using Block = Web3Unity.Scripts.Library.Ethers.Blocks.Block;
-using BlockWithTransactions = Web3Unity.Scripts.Library.Ethers.Blocks.BlockWithTransactions;
-using TransactionReceipt = Web3Unity.Scripts.Library.Ethers.Transactions.TransactionReceipt;
+using Web3Dots.RPC.Transactions;
+using Block = Web3Dots.RPC.Blocks.Block;
+using BlockWithTransactions = Web3Dots.RPC.Blocks.BlockWithTransactions;
+using TransactionReceipt = Web3Dots.RPC.Transactions.TransactionReceipt;
 
-namespace Web3Unity.Scripts.Library.Ethers.Providers
+namespace Web3Dots.RPC.Providers
 {
     public interface IProvider
     {
@@ -42,7 +40,7 @@ namespace Web3Unity.Scripts.Library.Ethers.Providers
         public Task<HexBigInteger> EstimateGas(TransactionRequest transaction);
         public Task<TransactionResponse> SendTransaction(string signedTx);
 
-        public Task<Transactions.TransactionReceipt> WaitForTransactionReceipt(string transactionHash,
+        public Task<TransactionReceipt> WaitForTransactionReceipt(string transactionHash,
             uint confirmations = 1,
             uint timeout = 30);
 

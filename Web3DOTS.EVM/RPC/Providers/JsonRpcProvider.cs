@@ -6,10 +6,10 @@ using Nethereum.JsonRpc.Client.RpcMessages;
 using Nethereum.Web3.Accounts;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Web3Unity.Scripts.Library.Ethers.Network;
-using Web3Unity.Scripts.Library.Ethers.Signers;
+using Web3Dots.RPC.Network;
+using Web3Dots.RPC.Signers;
 
-namespace Web3Unity.Scripts.Library.Ethers.Providers
+namespace Web3Dots.RPC.Providers
 {
     public class JsonRpcProvider : BaseProvider
     {

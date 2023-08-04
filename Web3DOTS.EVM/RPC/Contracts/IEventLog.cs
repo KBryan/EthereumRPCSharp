@@ -1,6 +1,6 @@
 using Nethereum.RPC.Eth.DTOs;
 
-namespace Web3Unity.Scripts.Library.Ethers.Contracts
+namespace Web3Dots.RPC.Contracts
 {
     public interface IEventLog
     {

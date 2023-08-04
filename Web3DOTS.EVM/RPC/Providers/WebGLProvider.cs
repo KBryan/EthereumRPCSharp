@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace Web3Unity.Scripts.Library.Ethers.Providers
+namespace Web3Dots.RPC.Providers
 {
-    /*public class WebGLProvider : IExternalProvider
+    public class WebGLProvider : IExternalProvider
     {
         public string GetPath()
         {
@@ -21,9 +21,9 @@ namespace Web3Unity.Scripts.Library.Ethers.Providers
             {
                 jsonParams = "[]";
             }
-            
-            var result = await Web3GLLight.SendAsync(method, jsonParams);
+
+            var result = "";//await Web3GLLight.SendAsync(method, jsonParams);
             return JsonConvert.DeserializeObject<T>(result);
         }
-    }*/
+    }
 }

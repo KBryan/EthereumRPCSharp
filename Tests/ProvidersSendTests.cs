@@ -1,8 +1,9 @@
 ﻿using System;
 using Nethereum.Hex.HexTypes;
+using Nethereum.Model;
 using NUnit.Framework;
-using Web3Unity.Scripts.Library.Ethers.Providers;
-using Web3Unity.Scripts.Library.Ethers.Transactions;
+using Web3Dots.RPC.Providers;
+using Web3Dots.RPC.Transactions;
 
 namespace Tests
 {
@@ -10,10 +11,12 @@ namespace Tests
     public class ProvidersSendTests
     {
         private JsonRpcProvider _ganacheProvider;
+        private Account _account;
 
         [OneTimeSetUp]
         public void SetUp()
         {
+            _account = new Account();
             _ganacheProvider = new JsonRpcProvider("http://127.0.0.1:7545");
         }
         

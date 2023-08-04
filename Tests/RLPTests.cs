@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using Nethereum.Hex.HexConvertors.Extensions;
 using NUnit.Framework;
-using Web3Unity.Scripts.Library.Ethers.RLP;
+using Web3Dots.RPC.RLP;
 
 namespace Tests
 {

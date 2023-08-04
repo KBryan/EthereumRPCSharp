@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace Web3Unity.Scripts.Library.Ethers.Web
+namespace Web3Dots.RPC.Web
 {
     public class Web
     {
@@ -28,6 +28,5 @@ namespace Web3Unity.Scripts.Library.Ethers.Web
                 return message;
             }
         }
-
     }
 }

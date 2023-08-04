@@ -1,4 +1,4 @@
-namespace Web3Unity.Scripts.Library.Ethers.Network
+namespace Web3Dots.RPC.Network
 {
     public class Network
     {

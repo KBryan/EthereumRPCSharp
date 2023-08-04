@@ -9,10 +9,11 @@ using Nethereum.RPC.Eth.DTOs.Comparers;
 using Nethereum.Util;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Web3Unity.Scripts.Library.Ethers.Contracts.Builders;
-using Web3Unity.Scripts.Library.Ethers.Contracts.Builders.FilterInput;
+using Web3Dots.RPC.Contracts.Builders;
+using Web3Dots.RPC.Contracts.Builders.FilterInput;
+using Web3Unity.Scripts.Library.Ethers.Contracts;
 
-namespace Web3Unity.Scripts.Library.Ethers.Contracts.Extensions
+namespace Web3Dots.RPC.Contracts.Extensions
 {
 
     public static class EventExtensions

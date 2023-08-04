@@ -11,9 +11,9 @@ using Nethereum.Util;
 using Nethereum.Web3.Accounts;
 using Newtonsoft.Json;
 using Org.BouncyCastle.Math;
-using Web3Unity.Scripts.Library.Ethers.Providers;
-using Web3Unity.Scripts.Library.Ethers.Signers;
-using Web3Unity.Scripts.Library.Ethers.Transactions;
+using Web3Dots.RPC.Providers;
+using Web3Dots.RPC.Signers;
+using Web3Dots.RPC.Transactions;
 
 namespace Web3Dots
 {

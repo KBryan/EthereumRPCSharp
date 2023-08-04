@@ -5,8 +5,9 @@ using Nethereum.ABI.FunctionEncoding.Attributes;
 using Nethereum.ABI.Model;
 using Nethereum.Hex.HexConvertors.Extensions;
 using Nethereum.RPC.Eth.DTOs;
+using Web3Unity.Scripts.Library.Ethers.Contracts.Builders;
 
-namespace Web3Unity.Scripts.Library.Ethers.Contracts.Builders
+namespace Web3Dots.RPC.Contracts.Builders
 {
     public class ContractBuilder
     {

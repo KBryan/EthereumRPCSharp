@@ -5,10 +5,10 @@ using System.Security.Cryptography;
 using System.Text;
 using NBitcoin;
 using Nethereum.Hex.HexConvertors.Extensions;
-using Web3Unity.Scripts.Library.Ethers.HDNode.Wordlists;
-using Wordlist = Web3Unity.Scripts.Library.Ethers.HDNode.Wordlists.Wordlist;
+using Web3Dots.RPC.HDNode.Wordlists;
+using Wordlist = Web3Dots.RPC.HDNode.Wordlists.Wordlist;
 
-namespace Web3Unity.Scripts.Library.Ethers.HDNode
+namespace Web3Dots.RPC.HDNode
 {
     public class HDNode
     {

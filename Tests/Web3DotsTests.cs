@@ -1,10 +1,10 @@
 ﻿using Nethereum.Hex.HexTypes;
 using Nethereum.RPC.Eth.DTOs;
 using NUnit.Framework;
-using Web3Unity.Scripts.Library.Ethers.Contracts;
-using Web3Unity.Scripts.Library.Ethers.Providers;
-using Web3Unity.Scripts.Library.Ethers.Transactions;
-using Web3Unity.Scripts.Library.Ethers.Utils;
+using Web3Dots.RPC.Contracts;
+using Web3Dots.RPC.Providers;
+using Web3Dots.RPC.Transactions;
+using Web3Dots.RPC.Utils;
 
 namespace Tests
 {

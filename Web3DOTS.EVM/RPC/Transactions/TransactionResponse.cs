@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Nethereum.Hex.HexTypes;
 using Newtonsoft.Json;
 
-namespace Web3Unity.Scripts.Library.Ethers.Transactions
+namespace Web3Dots.RPC.Transactions
 {
     public class TransactionResponse : Transaction
     {

@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace Web3Unity.Scripts.Library.Ethers.Network
+namespace Web3Dots.RPC.Network
 {
     public class Chains
     {

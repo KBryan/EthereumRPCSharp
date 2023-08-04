@@ -1,7 +1,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace Web3Unity.Scripts.Library.Ethers.Bytes
+namespace Web3Dots.RPC.Bytes
 {
     public class Bytes
     {

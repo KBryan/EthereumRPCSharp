@@ -4,9 +4,10 @@ using System.Linq.Expressions;
 using System.Reflection;
 using Nethereum.ABI.Model;
 using Nethereum.RPC.Eth.DTOs;
-using Web3Unity.Scripts.Library.Ethers.Contracts.Extensions;
+using Web3Dots.RPC.Contracts.Extensions;
+using Web3Unity.Scripts.Library.Ethers.Contracts.Builders;
 
-namespace Web3Unity.Scripts.Library.Ethers.Contracts.Builders.FilterInput
+namespace Web3Dots.RPC.Contracts.Builders.FilterInput
 {
     /// <summary>
     /// Builds a filter based on indexed parameters on an event DTO query template.

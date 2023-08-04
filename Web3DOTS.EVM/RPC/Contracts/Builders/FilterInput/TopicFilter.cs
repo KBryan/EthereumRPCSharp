@@ -2,7 +2,7 @@
 using System.Reflection;
 using Nethereum.ABI.FunctionEncoding.Attributes;
 
-namespace Web3Unity.Scripts.Library.Ethers.Contracts.Builders.FilterInput
+namespace Web3Dots.RPC.Contracts.Builders.FilterInput
 {
     internal class TopicFilter
     {

@@ -1,12 +1,12 @@
 using System;
 using System.Threading.Tasks;
 using Nethereum.Hex.HexTypes;
-using Web3Unity.Scripts.Library.Ethers.Contracts.Builders;
-using Web3Unity.Scripts.Library.Ethers.Providers;
-using Web3Unity.Scripts.Library.Ethers.Signers;
-using Web3Unity.Scripts.Library.Ethers.Transactions;
+using Web3Dots.RPC.Contracts.Builders;
+using Web3Dots.RPC.Providers;
+using Web3Dots.RPC.Signers;
+using Web3Dots.RPC.Transactions;
 
-namespace Web3Unity.Scripts.Library.Ethers.Contracts
+namespace Web3Dots.RPC.Contracts
 {
     public static class MyUtils
     {

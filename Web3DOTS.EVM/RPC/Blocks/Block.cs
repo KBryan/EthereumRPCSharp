@@ -1,7 +1,7 @@
 using Nethereum.Hex.HexTypes;
 using Newtonsoft.Json;
 
-namespace Web3Unity.Scripts.Library.Ethers.Blocks
+namespace Web3Dots.RPC.Blocks
 {
     public class Block
     {

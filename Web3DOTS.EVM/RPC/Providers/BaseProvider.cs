@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 using Nethereum.Hex.HexConvertors.Extensions;
 using Nethereum.Hex.HexTypes;
 using Nethereum.RPC.Eth.DTOs;
+using Web3Dots.RPC.Transactions;
 //using Web3Unity.Scripts.Library.Ethers.Runtime;
-using Web3Unity.Scripts.Library.Ethers.Transactions;
-using Block = Web3Unity.Scripts.Library.Ethers.Blocks.Block;
-using BlockWithTransactions = Web3Unity.Scripts.Library.Ethers.Blocks.BlockWithTransactions;
-using Transaction = Web3Unity.Scripts.Library.Ethers.Transactions.Transaction;
-using TransactionReceipt = Web3Unity.Scripts.Library.Ethers.Transactions.TransactionReceipt;
+using Block = Web3Dots.RPC.Blocks.Block;
+using BlockWithTransactions = Web3Dots.RPC.Blocks.BlockWithTransactions;
+using Formatter = Web3Dots.RPC.Providers.Formatter;
+using Transaction = Web3Dots.RPC.Transactions.Transaction;
+using TransactionReceipt = Web3Dots.RPC.Transactions.TransactionReceipt;
 
-namespace Web3Unity.Scripts.Library.Ethers.Providers
+namespace Web3Dots.RPC.Providers
 {
     public class InternalBlockNumber
     {

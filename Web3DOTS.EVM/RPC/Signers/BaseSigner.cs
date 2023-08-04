@@ -6,10 +6,10 @@ using Nethereum.RPC.Eth.DTOs;
 using Nethereum.Signer;
 using Nethereum.Web3;
 using Nethereum.Web3.Accounts;
-using Web3Unity.Scripts.Library.Ethers.Providers;
-using Web3Unity.Scripts.Library.Ethers.Transactions;
+using Web3Dots.RPC.Providers;
+using Web3Dots.RPC.Transactions;
 
-namespace Web3Unity.Scripts.Library.Ethers.Signers
+namespace Web3Dots.RPC.Signers
 {
     public abstract class BaseSigner : ISigner
     {

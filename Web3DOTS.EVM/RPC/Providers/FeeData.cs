@@ -1,6 +1,6 @@
 using System.Numerics;
 
-namespace Web3Unity.Scripts.Library.Ethers.Providers
+namespace Web3Dots.RPC.Providers
 {
     public class FeeData
     {

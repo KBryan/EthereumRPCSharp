@@ -1,4 +1,4 @@
-namespace Web3Unity.Scripts.Library.Ethers.HDNode.Wordlists
+namespace Web3Dots.RPC.HDNode.Wordlists
 {
     public abstract class Wordlist
     {

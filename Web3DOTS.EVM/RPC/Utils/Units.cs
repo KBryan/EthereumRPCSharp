@@ -2,7 +2,7 @@ using System;
 using System.Numerics;
 using Nethereum.Util;
 
-namespace Web3Unity.Scripts.Library.Ethers.Utils
+namespace Web3Dots.RPC.Utils
 {
     public class Units
     {

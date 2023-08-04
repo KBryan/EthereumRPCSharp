@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Web3Unity.Scripts.Library.Ethers.Blocks
+namespace Web3Dots.RPC.Blocks
 {
     /// <summary>
     ///     Block including just the transaction hashes

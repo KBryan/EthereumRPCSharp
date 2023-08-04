@@ -1,11 +1,7 @@
 using System;
 using System.Threading.Tasks;
-using Nethereum.JsonRpc.Client.RpcMessages;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-//using Web3Unity.Scripts.Library.Ethers.Runtime;
 
-namespace Web3Unity.Scripts.Library.Ethers.Providers
+namespace Web3Dots.RPC.Providers
 {
     public class Web3Provider : JsonRpcProvider
     {

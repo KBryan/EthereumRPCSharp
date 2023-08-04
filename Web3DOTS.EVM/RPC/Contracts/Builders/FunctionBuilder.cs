@@ -3,6 +3,7 @@ using Nethereum.Hex.HexConvertors.Extensions;
 using Nethereum.Hex.HexTypes;
 using Nethereum.RPC.Eth.DTOs;
 using Nethereum.RPC.TransactionTypes;
+using Web3Dots.RPC.Contracts.Builders;
 
 namespace Web3Unity.Scripts.Library.Ethers.Contracts.Builders
 {

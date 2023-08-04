@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
-using Web3Unity.Scripts.Library.Ethers.Transactions;
+using Web3Dots.RPC.Transactions;
 
-namespace Web3Unity.Scripts.Library.Ethers.Blocks
+namespace Web3Dots.RPC.Blocks
 {
     /// <summary>
     ///     Block including transaction objects

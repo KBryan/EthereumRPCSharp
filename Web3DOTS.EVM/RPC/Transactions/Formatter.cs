@@ -2,9 +2,9 @@ using System;
 using System.Linq;
 using Nethereum.Hex.HexConvertors.Extensions;
 using Nethereum.Hex.HexTypes;
-using Web3Unity.Scripts.Library.Ethers.RLP;
+using Web3Dots.RPC.RLP;
 
-namespace Web3Unity.Scripts.Library.Ethers.Transactions
+namespace Web3Dots.RPC.Transactions
 {
     public class Formatter
     {
@@ -30,7 +30,7 @@ namespace Web3Unity.Scripts.Library.Ethers.Transactions
 
         private Transaction _parse(byte[] payload)
         {
-            var decodedList = RLP.RLP.Decode(payload);
+            var decodedList = Web3Dots.RPC.RLP.RLP.Decode(payload);
             var decodedElements = (RLPCollection)decodedList;
 
             if (decodedElements.Count != 6 && decodedElements.Count != 9)
@@ -106,7 +106,7 @@ namespace Web3Unity.Scripts.Library.Ethers.Transactions
 
         private Transaction _parseEip2930(byte[] payload)
         {
-            var decodedList = RLP.RLP.Decode(payload.Skip(1).ToArray());
+            var decodedList = Web3Dots.RPC.RLP.RLP.Decode(payload.Skip(1).ToArray());
             var decodedElements = (RLPCollection)decodedList;
 
             if (decodedElements.Count != 8 && decodedElements.Count != 11)
@@ -142,7 +142,7 @@ namespace Web3Unity.Scripts.Library.Ethers.Transactions
 
         private Transaction _parseEip1559(byte[] payload)
         {
-            var decodedList = RLP.RLP.Decode(payload.Skip(1).ToArray());
+            var decodedList = Web3Dots.RPC.RLP.RLP.Decode(payload.Skip(1).ToArray());
             var decodedElements = (RLPCollection)decodedList;
 
             if (decodedElements.Count != 9 && decodedElements.Count != 12)

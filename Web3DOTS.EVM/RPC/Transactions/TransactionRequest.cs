@@ -4,7 +4,7 @@ using Nethereum.Hex.HexTypes;
 using Nethereum.RPC.Eth.DTOs;
 using Newtonsoft.Json;
 
-namespace Web3Unity.Scripts.Library.Ethers.Transactions
+namespace Web3Dots.RPC.Transactions
 {
     public class TransactionRequest : ICloneable
     {

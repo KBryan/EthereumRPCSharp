@@ -1,4 +1,4 @@
-namespace Web3Unity.Scripts.Library.Ethers.RLP
+namespace Web3Dots.RPC.RLP
 {
     /// <summary>
     ///     Wrapper class for decoded elements from an RLP encoded byte array.
